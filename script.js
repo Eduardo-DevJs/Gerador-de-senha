@@ -21,8 +21,8 @@ function gerarSenha(tamanho) {
 function mostrarSenha() {
   if (inputQuantidade.value === '') {
     alert('Favor, digite uma quantidade!');
-  } else if (inputQuantidade.value > 10) {
-    alert('Excedeu o numeros maximo de caracateres, minino: 10');
+  } else if (inputQuantidade.value > 10 || inputQuantidade.value < 4 ) {
+    alert('Min: 4 / Max: 10');
   } else {
     senhaGerada.innerHTML = gerarSenha(inputQuantidade.value);
   }
